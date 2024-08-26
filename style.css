@@ -30,3 +30,8 @@ html {
 h1 {
   font-weight: 400%;
 }
+
+img {
+  height: auto;
+  width: 100%;
+}
