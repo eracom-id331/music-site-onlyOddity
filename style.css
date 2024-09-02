@@ -3,19 +3,19 @@
    ============== */
 
 html {
-  color: #222;
-  background-color: #eee;
+  color: #ffffff;
+  background-color: #161616;
 }
 
 /* =======================
    EXEMPLE de Media Query
    ======================= */
 
-@media only screen and (min-width: 800px) {
-  html {
-    background-color: rgb(255, 255, 255);
-  }
-}
+   @media only screen and (min-width: 600px) 
+    .grid {
+      grid-template-columns: repeat(auto-fill),minmax(250pc, 1fr)
+      gap: 1rem;
+    }
 
 .header {
   position: relative;
@@ -23,15 +23,26 @@ html {
 
 .header h1 {
   position: absolute;
-  top: 10%;
-  bottom: 5%;
+  top: 70%;
+  bottom: 30%;
+  right: 50%;
+  left: 50%;
 }
 
 h1 {
-  font-weight: 400%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
 }
 
 img {
   height: auto;
   width: 100%;
+}
+
+.menu{
+  justify-content: center;
+  display: flex;
+  gap: 5rem;
 }
