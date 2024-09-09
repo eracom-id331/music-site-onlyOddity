@@ -41,6 +41,7 @@ h1 {
   align-items: center;
 }
 .bio {
+  padding: 60px;
   max-width: 400px;
   max-height: auto;
   align-items: center;
