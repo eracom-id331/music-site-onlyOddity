@@ -5,35 +5,50 @@
 html {
   color: #ffffff;
   background-color: #161616;
+  padding: 40px;
 }
 
 /* =======================
    EXEMPLE de Media Query
    ======================= */
 
-   @media only screen and (min-width: 600px) 
-    .grid {
-      grid-template-columns: repeat(auto-fill),minmax(250pc, 1fr)
-      gap: 1rem;
-    }
+@media only screen and (min-width: 600px) @font-face {
+  font-family: "RIBN131B";
+  src: url(font/RIBN131B.TTF) format("truetype");
+  /* Remplace 'MaPolicePersonnalisée.ttf' par le nom de ton fichier de police */
+}
+
+body {
+}
 
 .header {
   position: relative;
 }
 
 .header h1 {
+  font-family: "RIBN131B", sans-serif;
+  color: #161616;
   position: absolute;
-  top: 70%;
+  top: 20%;
   bottom: 30%;
-  right: 50%;
-  left: 50%;
+  right: 80%;
+  left: 30%;
 }
 
 h1 {
   justify-content: center;
   display: flex;
   align-items: center;
-
+}
+.bio {
+  max-width: 400px;
+  max-height: auto;
+  align-items: center;
+}
+p {
+  max-width: 400px;
+  max-height: auto;
+  padding: 60px;
 }
 
 img {
@@ -41,8 +56,31 @@ img {
   width: 100%;
 }
 
-.menu{
+.menu {
   justify-content: center;
   display: flex;
   gap: 5rem;
+}
+
+.discographie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.album {
+  text-align: start;
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: thin;
+  font-family: "RIBN131B", sans-serif;
 }
