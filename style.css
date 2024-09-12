@@ -7,9 +7,17 @@
   src: url(font/RIBN131B.TTF) format("truetype"); /* Assurez-vous que le chemin et le nom du fichier sont corrects */
 }
 
+@font-face {
+  font-family: "MaskdownOne-BWV7V";
+  src: url(font/MaskdownOne-BWV7V.otf) format(truetype);
+}
+
 html {
-  color: #ffffff;
-  background-color: #161616;
+  background: linear-gradient(
+    rgb(0, 0, 0),
+    rgb(126, 126, 126),
+    rgb(255, 255, 255)
+  );
 }
 
 body {
@@ -25,8 +33,9 @@ body {
   position: absolute;
   top: 0%;
   bottom: 90%;
-  right: 60%;
-  left: 30%;
+  right: 20%;
+  left: 10%;
+  color: white;
 }
 
 .header img {
@@ -34,22 +43,27 @@ body {
   height: auto;
 }
 
-h1 {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
 .bio {
-  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
   max-height: auto;
   text-align: center;
-  padding: 60px;
+  gap: 96px;
+}
+
+.bio h2 {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  padding-top: 3%;
+  color: white;
 }
 
 p {
-  max-width: 400px;
+  max-width: 30%;
   max-height: auto;
+  color: white;
 }
 
 img {
@@ -62,6 +76,7 @@ img {
   justify-content: center;
   display: flex;
   gap: 5rem;
+  color: white;
 }
 
 .titre3 h2 {
@@ -73,6 +88,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   padding: 10px 20px;
+  color: black;
 }
 
 .album {
@@ -88,6 +104,19 @@ img {
 .album h2 {
   margin-top: 10px;
   font-size: 16px;
+}
+
+.video-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.video-container div {
+  padding: 1rem;
+  width: 100%;
+  height: auto;
 }
 
 /* =======================
