@@ -2,20 +2,14 @@
    Style de base
    ============== */
 
+@font-face {
+  font-family: "RIBN131B";
+  src: url(font/RIBN131B.TTF) format("truetype"); /* Assurez-vous que le chemin et le nom du fichier sont corrects */
+}
+
 html {
   color: #ffffff;
   background-color: #161616;
-  padding: 40px;
-}
-
-/* =======================
-   EXEMPLE de Media Query
-   ======================= */
-
-@media only screen and (min-width: 600px) @font-face {
-  font-family: "RIBN131B";
-  src: url(font/RIBN131B.TTF) format("truetype");
-  /* Remplace 'MaPolicePersonnalisée.ttf' par le nom de ton fichier de police */
 }
 
 body {
@@ -23,16 +17,21 @@ body {
 
 .header {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .header h1 {
-  font-family: "RIBN131B", sans-serif;
-  color: #161616;
   position: absolute;
-  top: 20%;
-  bottom: 30%;
-  right: 80%;
+  top: 0%;
+  bottom: 90%;
+  right: 60%;
   left: 30%;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -40,21 +39,23 @@ h1 {
   display: flex;
   align-items: center;
 }
+
 .bio {
-  padding: 60px;
   max-width: 400px;
   max-height: auto;
-  align-items: center;
+  text-align: center;
+  padding: 60px;
 }
+
 p {
   max-width: 400px;
   max-height: auto;
-  padding: 60px;
 }
 
 img {
   height: auto;
   width: 100%;
+  border-radius: 8px;
 }
 
 .menu {
@@ -63,10 +64,15 @@ img {
   gap: 5rem;
 }
 
+.titre3 h2 {
+  padding: 10px 20px;
+}
+
 .discographie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
+  padding: 10px 20px;
 }
 
 .album {
@@ -79,9 +85,14 @@ img {
   border-radius: 8px;
 }
 
-.album p {
+.album h2 {
   margin-top: 10px;
   font-size: 16px;
-  font-weight: thin;
-  font-family: "RIBN131B", sans-serif;
+}
+
+/* =======================
+     EXEMPLE de Media Query
+     ======================= */
+
+@media only screen and (min-width: 600px) {
 }
