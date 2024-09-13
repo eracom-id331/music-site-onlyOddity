@@ -13,11 +13,7 @@
 }
 
 html {
-  background: linear-gradient(
-    rgb(0, 0, 0),
-    rgb(126, 126, 126),
-    rgb(255, 255, 255)
-  );
+  background-color: black;
 }
 
 body {
@@ -56,7 +52,7 @@ body {
   text-align: center;
   max-width: 100%;
   height: auto;
-  padding-top: 3%;
+  padding-top: 7%;
   color: white;
 }
 
@@ -88,7 +84,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   padding: 10px 20px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .album {
@@ -103,7 +99,8 @@ img {
 
 .album h2 {
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 20px;
+  color: white;
 }
 
 .video-container {
@@ -117,6 +114,10 @@ img {
   padding: 1rem;
   width: 100%;
   height: auto;
+}
+
+.video-container h2 {
+  color: white;
 }
 
 /* =======================
