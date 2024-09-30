@@ -16,9 +16,6 @@ html {
   background-color: black;
 }
 
-body {
-}
-
 .header {
   position: relative;
   width: 100%;
@@ -105,9 +102,37 @@ img {
 
 .video-container {
   display: flex;
-  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
   width: 100%;
-  height: auto;
+  padding-bottom: 20px;
+}
+
+/* Ajuster la hauteur pour s'assurer qu'elle ne prend que la place nécessaire */
+.video-container::-webkit-scrollbar {
+  height: 8px; /* Personnalisation de la hauteur de la scrollbar */
+}
+
+/* Améliorer l'apparence de la scrollbar */
+.video-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.video-container div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+}
+
+/* Empêcher le défilement horizontal sur toute la page */
+body {
+  overflow-x: hidden;
 }
 
 .video-container div {
@@ -116,8 +141,71 @@ img {
   height: auto;
 }
 
-.video-container h2 {
+/* Ajout de l'image de fond avec position fixe */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("Image/f58143557afa553b566d7de1be847c18.jpg"); /* Remplacez par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "RIBN131B", system-ui;
+  font-size: 17em;
+  font-weight: lighter;
   color: white;
+}
+
+.menu h2 {
+  font-family: "RIBN131B", system-ui;
+  font-size: 2em;
+  font-weight: lighter;
+  color: white;
+}
+
+.discographie h2 {
+  font-family: "RIBN131B", system-ui;
+  font-size: 2em;
+  font-weight: lighter;
+  color: white;
+}
+
+.titre3 {
+  font-family: "RIBN131B", system-ui;
+  font-size: 2em;
+  font-weight: lighter;
+  color: white;
+}
+
+.bio h2 {
+  font-family: "MaskdownOne-BWV7V", system-ui;
+  font-size: 2em;
+  font-weight: lighter;
+  color: white;
+}
+
+/* Style pour voir le texte et l'image de fond */
+.header,
+.bio,
+.discographie,
+.video-container {
+  
+
+
+/* Styles pour rendre la section vidéo scrollable horizontalement */
+.video-container h2 {
+  font-family: "RIBN131B", system-ui;
+  font-size: 2em;
+  font-weight: lighter;
+  color: white;
+}
+
+/* Ajout d'une hauteur pour permettre le défilement */
+.content {
+  height: 200vh;
 }
 
 /* =======================
