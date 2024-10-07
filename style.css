@@ -1,216 +1,245 @@
-/* ==============
-   Style de base
-   ============== */
-
-@font-face {
-  font-family: "RIBN131B";
-  src: url(font/RIBN131B.TTF) format("truetype"); /* Assurez-vous que le chemin et le nom du fichier sont corrects */
+/* Styles globaux */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-@font-face {
-  font-family: "MaskdownOne-BWV7V";
-  src: url(font/MaskdownOne-BWV7V.otf) format(truetype);
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
 }
 
-html {
-  background-color: black;
+a:hover {
+  color: #ff4081;
 }
 
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu de navigation */
+.menu {
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.menu h2 {
+  font-size: 1.5rem;
+}
+
+.menu h2 a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.menu h2 a:hover {
+  color: #ff4081;
+}
+
+/* Section header */
 .header {
   position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.header h1 {
-  position: absolute;
-  top: 0%;
-  bottom: 90%;
-  right: 20%;
-  left: 10%;
+  text-align: center;
   color: white;
 }
 
 .header img {
   width: 100%;
   height: auto;
+  max-height: 600px;
+  object-fit: cover;
 }
 
-.bio {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  max-height: auto;
-  text-align: center;
-  gap: 96px;
+.header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff4081;
+  animation: fadeInDown 1.5s ease-out;
 }
 
-.bio h2 {
-  text-align: center;
-  max-width: 100%;
-  height: auto;
-  padding-top: 7%;
-  color: white;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
-p {
-  max-width: 30%;
-  max-height: auto;
-  color: white;
-}
-
-img {
-  height: auto;
-  width: 100%;
-  border-radius: 8px;
-}
-
-.menu {
-  justify-content: center;
-  display: flex;
-  gap: 5rem;
-  color: white;
-}
-
+/* Sections de titres */
 .titre3 h2 {
-  padding: 10px 20px;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ff4081;
 }
 
+/* Section bio */
+.bio {
+  padding: 1.5rem 3rem;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+/* Discographie */
+/* Discographie */
 .discographie {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  padding: 10px 20px;
-  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .album {
-  text-align: start;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .album img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 450px; /* Augmente la taille des images */
+  height: 450px; /* Ajuste la hauteur pour correspondre */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
 }
 
 .album h2 {
-  margin-top: 10px;
-  font-size: 20px;
-  color: white;
+  margin-top: 0.5rem;
+  font-size: 1.5rem; /* Augmente la taille du texte des titres d'album */
 }
 
+.album:hover {
+  transform: scale(1.1); /* Légère augmentation lors du survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Vidéos */
+/* Vidéos */
+/* Vidéos */
 .video-container {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
-/* Ajuster la hauteur pour s'assurer qu'elle ne prend que la place nécessaire */
-.video-container::-webkit-scrollbar {
-  height: 8px; /* Personnalisation de la hauteur de la scrollbar */
-}
-
-/* Améliorer l'apparence de la scrollbar */
-.video-container::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 2rem; /* Ajoute du rembourrage autour de la section */
+  gap: 2rem; /* Ajoute de l'espace entre les vidéos */
 }
 
 .video-container div {
-  display: inline-block;
-  margin-right: 20px;
+  flex: 0 0 auto; /* Évite que les éléments ne rétrécissent */
+  text-align: center; /* Centre le texte sous les vidéos */
 }
 
-iframe {
-  width: 560px;
-  height: 315px;
+.video-container iframe {
+  width: 600px; /* Réduit la largeur des vidéos */
+  height: 338px; /* Ajuste la hauteur proportionnellement */
+  border: none; /* Supprime la bordure pour un aspect plus propre */
+  border-radius: 10px; /* Ajoute des bords arrondis */
 }
 
-/* Empêcher le défilement horizontal sur toute la page */
-body {
-  overflow-x: hidden;
-}
-
-.video-container div {
-  padding: 1rem;
-  width: 100%;
-  height: auto;
-}
-
-/* Ajout de l'image de fond avec position fixe */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url("Image/f58143557afa553b566d7de1be847c18.jpg"); /* Remplacez par le chemin de votre image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-h1 {
-  font-family: "RIBN131B", system-ui;
-  font-size: 17em;
-  font-weight: lighter;
-  color: white;
-}
-
-.menu h2 {
-  font-family: "RIBN131B", system-ui;
-  font-size: 2em;
-  font-weight: lighter;
-  color: white;
-}
-
-.discographie h2 {
-  font-family: "RIBN131B", system-ui;
-  font-size: 2em;
-  font-weight: lighter;
-  color: white;
-}
-
-.titre3 {
-  font-family: "RIBN131B", system-ui;
-  font-size: 2em;
-  font-weight: lighter;
-  color: white;
-}
-
-.bio h2 {
-  font-family: "MaskdownOne-BWV7V", system-ui;
-  font-size: 2em;
-  font-weight: lighter;
-  color: white;
-}
-
-/* Style pour voir le texte et l'image de fond */
-.header,
-.bio,
-.discographie,
-.video-container {
-  
-
-
-/* Styles pour rendre la section vidéo scrollable horizontalement */
 .video-container h2 {
-  font-family: "RIBN131B", system-ui;
-  font-size: 2em;
-  font-weight: lighter;
-  color: white;
+  margin-top: 0.5rem; /* Espace au-dessus du titre */
+  font-size: 1.2rem; /* Ajuste la taille du texte des titres des vidéos */
 }
 
-/* Ajout d'une hauteur pour permettre le défilement */
-.content {
-  height: 200vh;
+/* Footer */
+.footer {
+  background-color: #202020;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-/* =======================
-     EXEMPLE de Media Query
-     ======================= */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-@media only screen and (min-width: 600px) {
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff4081;
+}
+
+.footer-social a {
+  margin: 0 1rem;
+}
+
+.footer-social a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .discographie,
+  .video-container {
+    flex-direction: column;
+  }
+
+  .album img {
+    width: 200px; /* Ajuste la taille sur mobile */
+    height: 200px;
+  }
+
+  .video-container {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    display: flex;
+    text-align: center;
+  }
 }
