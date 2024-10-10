@@ -13,7 +13,7 @@ body {
   font-weight: thin;
   font-style: normal;
 
-  background-color: #000000;
+  background-color: #070707;
   color: #fff;
 
   cursor: url("Image/target.png"), auto;
@@ -101,16 +101,17 @@ h2 {
   object-fit: cover;
 }
 
-h1 {
-  font-family: "RIBN131B", sans-serif; /* Applique "RIBN131B" seulement à h1 */
-  font-weight: bold; /* Ajuste le poids de la police si nécessaire */
-  font-size: 15em;
-
+/* Section header */
+.header h1 {
+  font-family: "RIBN131B", sans-serif;
+  font-weight: normal;
+  font-size: 25vh; /* Taille en pixels pour qu'elle reste fixe */
   color: #ffffff;
   position: absolute;
-  top: 50%; /* Ajustez cette valeur si nécessaire */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap; /* Empêche le titre de passer à la ligne sur petits écrans */
 }
 
 /* Sections de titres */
@@ -247,41 +248,97 @@ h1 {
 }
 
 /* Section Vidéos */
+/* Section Vidéos */
 .video-container {
-  display: flex; /* Alignement des vidéos en ligne */
-  overflow-x: auto; /* Permet le défilement horizontal */
+  display: flex;
+  overflow-x: auto;
   padding-bottom: 5rem;
-  gap: 2rem; /* Espace entre les vidéos */
-  scroll-snap-type: x mandatory; /* Améliore l'expérience de défilement */
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Ajout du défilement fluide */
+  padding-left: 1rem; /* Ajout d'un padding gauche */
 }
 
 .video-container div {
-  flex: 1; /* Empêche les éléments de rétrécir */
-  text-align: center; /* Centre le texte sous les vidéos */
-  scroll-snap-align: start; /* S'assure que les vidéos s'alignent au début lors du défilement */
+  flex: 0 0 auto; /* Empêche le rétrécissement et contrôle la taille des vidéos */
+  text-align: center;
+  scroll-snap-align: start;
+  min-width: 600px; /* Assure une largeur minimale des éléments */
 }
 
 .video-container iframe {
-  width: 600px; /* Largeur fixe des vidéos */
-  height: 338px; /* Hauteur fixe des vidéos */
+  width: 100%;
+  max-width: 600px; /* Largeur maximale pour éviter trop de grandissement sur les écrans larges */
+  height: auto; /* Laisse l'iframe s'ajuster automatiquement */
+  aspect-ratio: 16 / 9; /* Pour garder le ratio vidéo */
   border: none;
   border-radius: 10px;
 }
 
 .video-container h2 {
-  font-family: "RIBN131B", sans-serif; /* Ajoutez une police de secours si nécessaire */
+  font-family: "RIBN131B", sans-serif;
   margin-top: 0.5rem;
   font-size: 1.2rem;
 }
 
+.video-container::-webkit-scrollbar {
+  display: none; /* Masque la scrollbar pour une meilleure esthétique */
+}
+
+.video-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: -4rem;
+}
+
+.video-navigation button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.video-navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .video-container {
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    gap: 1rem;
+  }
+
+  .video-container iframe {
+    max-width: 100%;
+  }
+
+  .video-container div {
+    min-width: 150px; /* Réduit la taille minimale des vidéos */
+  }
+
+  .video-navigation button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Footer */
 /* Footer */
 .footer {
   background-color: #000000;
   color: #fff;
-  padding: 1rem 0;
+  padding: 2rem 1rem; /* Augmenté pour un meilleur espacement */
   text-align: center;
-  width: 100%; /* Assure que le footer prend toute la largeur */
-  clear: both; /* Empêche le footer de flotter à côté des autres éléments */
+  width: 100%;
+  clear: both;
 }
 
 .footer-container {
@@ -289,20 +346,29 @@ h1 {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem; /* Ajout d'espace entre les éléments */
 }
 
 .footer-logo img {
-  width: 300px; /* Taille du logo doublée (150px -> 300px) */
+  width: 200px; /* Taille du logo ajustée pour le responsive */
   margin-bottom: 1rem;
+  max-width: 100%; /* S'adapte à la taille de l'écran */
+  height: auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
 }
 
 .footer-links ul li {
-  margin: 0 0;
+  margin: 0 0.5rem; /* Espacement entre les liens */
 }
 
 .footer-links ul li a {
   color: #ffffff;
   transition: color 0.3s;
+  font-size: 1rem; /* Ajustement pour le responsive */
 }
 
 .footer-links ul li a:hover {
@@ -311,6 +377,12 @@ h1 {
 
 .footer-social a {
   margin: 0 1rem;
+}
+
+.footer-social a img {
+  width: 40px; /* Taille ajustée pour les icônes sociales */
+  height: 40px;
+  transition: transform 0.3s;
 }
 
 .footer-social a:hover img {
@@ -323,11 +395,51 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Responsive pour les écrans plus petits */
 @media only screen and (max-width: 900px) {
-  .header h1 {
-    font-size: 2.5rem;
+  .footer-container {
+    flex-direction: column; /* Empile les éléments */
+    text-align: center;
   }
 
+  .footer-logo img {
+    width: 150px; /* Réduit la taille du logo pour mobile */
+  }
+
+  .footer-links ul li {
+    margin: 0.5rem 0; /* Augmente l'espacement vertical pour mobile */
+  }
+
+  .footer-social a img {
+    width: 30px; /* Réduction des icônes sociales pour mobile */
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 1.5rem 1rem; /* Ajuste le padding pour mobile */
+  }
+
+  .footer-container {
+    gap: 1rem; /* Réduit l'espace entre les éléments */
+  }
+
+  .footer-links ul li a {
+    font-size: 0.9rem; /* Réduit la taille de la police pour mobile */
+  }
+
+  .footer-social a img {
+    width: 25px; /* Réduction supplémentaire des icônes sociales */
+    height: 25px;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem; /* Réduit la taille du texte copyright */
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .discographie,
   .video-container {
     flex-direction: column;
