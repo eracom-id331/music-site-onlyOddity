@@ -1,10 +1,48 @@
 /* Styles globaux */
+@font-face {
+  font-family: "RIBN131B";
+  src: url("font/RIBN131B.TTF") format("woff2"),
+    url("font/MaskdownOne-BWV7V.otf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #181818;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: thin;
+  font-style: normal;
+
+  background-color: #000000;
   color: #fff;
-  margin: 0;
-  padding: 0;
+
+  cursor: url("Image/target.png"), auto;
+}
+
+.transparent-image img {
+  width: 80%; /* Ajustez la taille de l'image selon vos besoins */
+  max-width: 300px; /* Limite la taille maximale de l'image */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+.mirror-images {
+  display: flex;
+  justify-content: center; /* Centre les images dans la section */
+  align-items: center; /* Aligne verticalement au centre */
+  padding: 1rem;
+}
+
+.mirror-image {
+  flex: 1; /* Permet aux images de prendre un espace égal */
+  display: flex;
+  justify-content: center; /* Centre l'image dans son conteneur */
+  padding: 2rem 0;
+}
+
+.mirror-image img {
+  width: 80%; /* Ajustez la taille de l'image selon vos besoins */
+  max-width: 300px; /* Limite la taille maximale de l'image */
+  height: auto; /* Garde les proportions de l'image */
 }
 
 a {
@@ -14,7 +52,7 @@ a {
 }
 
 a:hover {
-  color: #ff4081;
+  color: #5d5d5d;
 }
 
 h1,
@@ -25,24 +63,27 @@ h2 {
 
 /* Menu de navigation */
 .menu {
-  background-color: #202020;
+  background-color: #000000;
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  gap: 2rem;
+  padding: 2rem;
+  gap: 4rem;
+  text-decoration: none;
 }
 
 .menu h2 {
   font-size: 1.5rem;
+  font-family: "Sora", sans-serif;
 }
 
 .menu h2 a {
   color: #fff;
-  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .menu h2 a:hover {
-  color: #ff4081;
+  color: #5d5d5d;
+  text-decoration: none;
 }
 
 /* Section header */
@@ -50,64 +91,133 @@ h2 {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 2rem; /* Ajout d'espace en bas de la section header */
 }
 
 .header img {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 1000px;
   object-fit: cover;
 }
 
-.header h1 {
+h1 {
+  font-family: "RIBN131B", sans-serif; /* Applique "RIBN131B" seulement à h1 */
+  font-weight: bold; /* Ajuste le poids de la police si nécessaire */
+  font-size: 15em;
+
+  color: #ffffff;
   position: absolute;
-  top: 50%;
+  top: 50%; /* Ajustez cette valeur si nécessaire */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ff4081;
-  animation: fadeInDown 1.5s ease-out;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
 }
 
 /* Sections de titres */
 .titre3 h2 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: thin;
+  font-style: normal;
+
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   font-size: 2.5rem;
-  text-transform: uppercase;
-  color: #ff4081;
+  color: #ffffff;
+  margin-bottom: 1.5rem; /* Ajout d'espace en bas des titres */
 }
 
 /* Section bio */
 .bio {
-  padding: 1.5rem 3rem;
+  padding: 0rem 5rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: center;
   font-size: 1.1rem;
+  margin-bottom: 3rem; /* Ajout d'espace en bas de la section bio */
 }
 
-/* Discographie */
+/* Section Newsletter (taille réduite) */
+.newsletter {
+  background-color: #000000;
+  padding: 1.5rem 2.5rem; /* Divisé par 2 */
+  margin-bottom: 1.5rem; /* Réduit l'espacement */
+  text-align: center;
+  border-radius: 5px;
+}
+
+.newsletter-content {
+  max-width: 300px; /* Divisé par 2 pour réduire la largeur maximale */
+  margin: 0 auto;
+}
+
+.newsletter h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: bold;
+  font-size: 1rem; /* Taille de police divisée par 2 */
+  color: #fff;
+  margin-bottom: 0.5rem; /* Divisé par 2 */
+}
+
+.newsletter p {
+  font-family: "Sora", sans-serif;
+  font-size: 0.9rem; /* Taille de police légèrement réduite */
+  color: #b3b3b3;
+  margin-bottom: 1rem; /* Réduit */
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Divisé par 2 */
+}
+
+.newsletter-form input {
+  padding: 0.5rem; /* Divisé par 2 */
+  font-size: 0.9rem; /* Réduit la taille de la police */
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.5rem; /* Divisé par 2 */
+  font-size: 0.9rem; /* Taille de police réduite */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #d40813;
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter {
+    padding: 1rem; /* Ajusté pour le mobile */
+  }
+
+  .newsletter h3 {
+    font-size: 0.9rem; /* Taille ajustée pour mobile */
+  }
+
+  .newsletter p {
+    font-size: 0.8rem; /* Réduction pour mobile */
+  }
+}
+
 /* Discographie */
 .discographie {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+  padding: 0rem 5rem;
   gap: 2rem;
+  margin-bottom: 3rem; /* Ajout d'espace en bas de la section discographie */
 }
 
 .album {
@@ -116,56 +226,62 @@ h2 {
 }
 
 .album img {
-  width: 450px; /* Augmente la taille des images */
-  height: 450px; /* Ajuste la hauteur pour correspondre */
+  width: 450px;
+  height: 450px;
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.3s ease;
 }
 
 .album h2 {
+  font-family: "RIBN131B", sans-serif; /* Ajoutez une police de secours si nécessaire */
   margin-top: 0.5rem;
-  font-size: 1.5rem; /* Augmente la taille du texte des titres d'album */
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .album:hover {
-  transform: scale(1.1); /* Légère augmentation lors du survol */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+  text-shadow: 0 10px 2opx rgba(0, 0, 0, 0);
 }
 
 /* Section Vidéos */
-/* Vidéos */
-/* Vidéos */
 .video-container {
-  display: flex; /* Utilise Flexbox pour l'alignement */
+  display: flex; /* Alignement des vidéos en ligne */
   overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 2rem; /* Ajoute du rembourrage autour de la section */
-  gap: 2rem; /* Ajoute de l'espace entre les vidéos */
+  padding-bottom: 5rem;
+  gap: 2rem; /* Espace entre les vidéos */
+  scroll-snap-type: x mandatory; /* Améliore l'expérience de défilement */
 }
 
 .video-container div {
-  flex: 0 0 auto; /* Évite que les éléments ne rétrécissent */
+  flex: 1; /* Empêche les éléments de rétrécir */
   text-align: center; /* Centre le texte sous les vidéos */
+  scroll-snap-align: start; /* S'assure que les vidéos s'alignent au début lors du défilement */
 }
 
 .video-container iframe {
-  width: 600px; /* Réduit la largeur des vidéos */
-  height: 338px; /* Ajuste la hauteur proportionnellement */
-  border: none; /* Supprime la bordure pour un aspect plus propre */
-  border-radius: 10px; /* Ajoute des bords arrondis */
+  width: 600px; /* Largeur fixe des vidéos */
+  height: 338px; /* Hauteur fixe des vidéos */
+  border: none;
+  border-radius: 10px;
 }
 
 .video-container h2 {
-  margin-top: 0.5rem; /* Espace au-dessus du titre */
-  font-size: 1.2rem; /* Ajuste la taille du texte des titres des vidéos */
+  font-family: "RIBN131B", sans-serif; /* Ajoutez une police de secours si nécessaire */
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
 /* Footer */
 .footer {
-  background-color: #202020;
+  background-color: #000000;
   color: #fff;
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
+  width: 100%; /* Assure que le footer prend toute la largeur */
+  clear: both; /* Empêche le footer de flotter à côté des autres éléments */
 }
 
 .footer-container {
@@ -176,37 +292,25 @@ h2 {
 }
 
 .footer-logo img {
-  width: 150px;
+  width: 300px; /* Taille du logo doublée (150px -> 300px) */
   margin-bottom: 1rem;
 }
 
-.footer-links ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .footer-links ul li {
-  margin: 0.5rem 0;
+  margin: 0 0;
 }
 
 .footer-links ul li a {
-  color: #fff;
-  text-transform: uppercase;
+  color: #ffffff;
   transition: color 0.3s;
 }
 
 .footer-links ul li a:hover {
-  color: #ff4081;
+  color: #5d5d5d;
 }
 
 .footer-social a {
   margin: 0 1rem;
-}
-
-.footer-social a img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
 }
 
 .footer-social a:hover img {
@@ -219,7 +323,7 @@ h2 {
   font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .header h1 {
     font-size: 2.5rem;
   }
@@ -230,16 +334,13 @@ h2 {
   }
 
   .album img {
-    width: 200px; /* Ajuste la taille sur mobile */
+    width: 200px;
     height: 200px;
-  }
-
-  .video-container {
-    flex-direction: column;
   }
 
   .footer-container {
     display: flex;
     text-align: center;
+    align-items: center;
   }
 }

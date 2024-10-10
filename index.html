@@ -3,255 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Deftones - Site Officiel</title>
+    <title>Deftones - Fan Site</title>
     <meta name="description"
         content="Découvrez l'univers du groupe Deftones : biographie, discographie, vidéos et plus encore.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <style>
-        /* Styles globaux */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #181818;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #ff4081;
-        }
-
-        h1,
-        h2 {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Menu de navigation */
-        .menu {
-            background-color: #202020;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            gap: 2rem;
-        }
-
-        .menu h2 {
-            font-size: 1.5rem;
-        }
-
-        .menu h2 a {
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        .menu h2 a:hover {
-            color: #ff4081;
-        }
-
-        /* Section header */
-        .header {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .header img {
-            width: 100%;
-            height: auto;
-            max-height: 600px;
-            object-fit: cover;
-        }
-
-        .header h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #ff4081;
-            animation: fadeInDown 1.5s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -60%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        /* Sections de titres */
-        .titre3 h2 {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            color: #ff4081;
-        }
-
-        /* Section bio */
-        .bio {
-            padding: 1.5rem 3rem;
-            line-height: 1.6;
-            text-align: justify;
-            font-size: 1.1rem;
-        }
-
-        /* Discographie */
-        .discographie {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2rem;
-            gap: 2rem;
-        }
-
-        .album {
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .album img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .album h2 {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .album:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Section Vidéos */
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2rem;
-            gap: 2rem;
-        }
-
-        .video-container div {
-            text-align: center;
-        }
-
-        .video-container iframe {
-            border-radius: 15px;
-            max-width: 100%;
-        }
-
-        .video-container h2 {
-            margin-top: 0.5rem;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #202020;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-logo img {
-            width: 150px;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer-links ul li {
-            margin: 0.5rem 0;
-        }
-
-        .footer-links ul li a {
-            color: #fff;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        .footer-links ul li a:hover {
-            color: #ff4081;
-        }
-
-        .footer-social a {
-            margin: 0 1rem;
-        }
-
-        .footer-social a img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .footer-social a:hover img {
-            transform: scale(1.2);
-        }
-
-        .footer-copyright {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .discographie,
-            .video-container {
-                flex-direction: column;
-            }
-
-            .album img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .footer-container {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- Menu de navigation -->
     <section class="menu">
         <h2><a href="#bio">Bio</a></h2>
@@ -265,28 +27,72 @@
         <h1>Deftones</h1>
     </section>
 
+    <!-- Image transparente en miroir -->
+    <section class="mirror-images">
+        <div class="mirror-image">
+            <img src="Image/transparent1-gauche.png" alt="Image avec fond transparent gauche">
+        </div>
+        <div class="mirror-image">
+            <img src="Image/transparent1-droite.png" alt="Image avec fond transparent droite">
+        </div>
+    </section>
+
     <!-- Bio Section -->
     <section class="titre3" id="bio">
         <h2>Bio</h2>
     </section>
 
     <section class="bio">
+        <div class="overlay"></div> <!-- Fond transparent ajouté -->
         <p>Deftones est un groupe de rock alternatif et de metal fondé en 1988 à Sacramento, en Californie. Le groupe
-            est né
-            de l'amitié entre Chino Moreno (chant), Stephen Carpenter (guitare), et Abe Cunningham (batterie), qui
-            étaient
-            tous encore au lycée à l'époque. Ils ont été rejoints plus tard par Chi Cheng (basse) pour compléter la
-            formation initiale.
-        </p>
+            est né de l'amitié entre Chino Moreno (chant), Stephen Carpenter (guitare), et Abe Cunningham (batterie),
+            qui étaient tous encore au lycée à l'époque. Ils ont été rejoints plus tard par Chi Cheng (basse) pour
+            compléter la formation initiale.</p>
         <p>Deftones s'est imposé avec un son unique qui combine des éléments de hardcore, de punk, et de metal, tout en
-            expérimentant
-            avec des influences variées comme le shoegaze, l'électro et le post-rock. Le groupe est reconnu pour sa
-            capacité
-            à innover et à repousser les limites du genre, marquant ainsi la scène rock et metal alternatif.
-        </p>
+            expérimentant avec des influences variées comme le shoegaze, l'électro et le post-rock. Le groupe est
+            reconnu pour sa capacité à innover et à repousser les limites du genre, marquant ainsi la scène rock et
+            metal alternatif.</p>
         <p>Malgré les défis personnels, comme la perte tragique de Chi Cheng en 2013, Deftones continue de créer et
-            d'influencer avec un
-            style caractéristique et une carrière marquée par une recherche constante de nouvelles sonorités.</p>
+            d'influencer avec un style caractéristique et une carrière marquée par une recherche constante de nouvelles
+            sonorités.</p>
+    </section>
+
+
+
+    <!-- Image transparente en miroir -->
+    <section class="mirror-images">
+        <div class="mirror-image">
+            <img src="Image/transparent2.png" alt="Image avec fond transparent gauche">
+        </div>
+        <div class="mirror-image">
+            <img src="Image/transparent2-gauche.png" alt="Image avec fond transparent droite">
+        </div>
+    </section>
+
+
+    <!-- Newsletter Section -->
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Newsletter</h2>
+            <h3>Restez informé des dernières actualités de Deftones !</h3>
+            <p>Abonnez-vous à notre newsletter pour recevoir toutes les informations sur les nouveaux albums, les
+                tournées, et plus encore.</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" placeholder="Entrez votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Image transparente en miroir -->
+    <section class="mirror-images">
+        <div class="mirror-image">
+            <img src="Image/transparent4.png" alt="Image avec fond transparent gauche">
+        </div>
+        <div class="mirror-image">
+            <img src="Image/transparent4-droite.png" alt="Image avec fond transparent droite">
+        </div>
     </section>
 
     <!-- Discographie Section -->
@@ -333,8 +139,18 @@
         </div>
     </section>
 
+    <!-- Image transparente en miroir -->
+    <section class="mirror-images">
+        <div class="mirror-image">
+            <img src="Image/transparent4.png" alt="Image avec fond transparent gauche">
+        </div>
+        <div class="mirror-image">
+            <img src="Image/transparent4-droite.png" alt="Image avec fond transparent droite">
+        </div>
+    </section>
+
     <!-- Vidéo Section -->
-    <section class="titre3">
+    <section class="titre3" id="video">
         <h2>Vidéo</h2>
     </section>
 
@@ -363,36 +179,55 @@
             <h2>RoseMary</h2>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="Image/deftoneslogo.jpg" alt="Deftones Logo">
-                </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c2rqBUlrXqU?si=24LsFXDxgR7H7KyM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Be quiet and drive (far away)</h2>
+        </div>
+    </section>
 
-                <div class="footer-links">
-                    <h2>Navigation</h2>
-                    <ul>
-                        <li><a href="#bio">Bio</a></li>
-                        <li><a href="#discographie">Discographie</a></li>
-                        <li><a href="#video">Vidéos</a></li>
-                    </ul>
-                </div>
 
-                <div class="footer-social">
-                    <h2>Suivez-nous</h2>
-                    <a href="https://facebook.com/deftones" target="_blank"><img src="Image/facebook.jpeg"
-                            alt="Facebook"></a>
-                    <a href="https://instagram.com/deftones" target="_blank"><img src="Image/instagram.png"
-                            alt="Instagram"></a>
-                    <a href="https://twitter.com/deftones" target="_blank"><img src="Image/X.png" alt="Twitter"></a>
-                </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="Image/deftoneslogo.jpg" alt="Deftones Logo">
             </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Deftones. Tous droits réservés.</p>
-                <p>Site conçu par Timoté Zin</p>
+
+            <!-- Newsletter Section -->
+            <div class="footer-newsletter">
+                <h2>Newsletter</h2>
+                <p>Abonnez-vous pour recevoir les dernières actualités</p>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">S'abonner</button>
+                </form>
             </div>
-        </footer>
+
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <h2>Liens</h2>
+                <ul>
+                    <li><a href="#bio">Bio</a></li>
+                    <li><a href="#discographie">Discographie</a></li>
+                    <li><a href="#video">Vidéo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h2>Réseaux Sociaux</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/deftones">Facebook</a></li>
+                    <li><a href="https://twitter.com/deftones">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/deftones/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
