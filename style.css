@@ -1,37 +1,481 @@
-/* ==============
-   Style de base
-   ============== */
-
-html {
-  color: #222;
-  background-color: #eee;
+@font-face {
+  font-family: "RIBN131B";
+  src: url("font/RIBN131B.TTF") format("woff2"),
+    url("font/MaskdownOne-BWV7V.otf") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* =======================
-   EXEMPLE de Media Query
-   ======================= */
+body {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: thin;
+  font-style: normal;
+  background-color: #070707;
+  color: #fff;
+  cursor: url("Image/target.png"), auto;
+}
 
-@media only screen and (min-width: 800px) {
-  html {
-    background-color: rgb(255, 255, 255);
-  }
+.transparent-image img {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+}
+
+.mirror-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mirror-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.mirror-image img {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #5d5d5d;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 4rem;
+  text-decoration: none;
+}
+
+.menu h2 {
+  font-size: 1.5rem;
+  font-family: "Sora", sans-serif;
+}
+
+.menu h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu h2 a:hover {
+  color: #5d5d5d;
+  text-decoration: none;
 }
 
 .header {
   position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  max-height: 1000px;
+  object-fit: cover;
 }
 
 .header h1 {
+  font-family: "RIBN131B", sans-serif;
+  font-weight: normal;
+  font-size: 25vh;
+  color: #ffffff;
   position: absolute;
-  top: 10%;
-  bottom: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  animation: flash 1s infinite; /* Applique l'animation de flash */
 }
 
-h1 {
-  font-weight: 400%;
+.titre3 h2 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: thin;
+  font-style: normal;
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
 }
 
-img {
-  height: auto;
+.bio {
+  padding: 0rem 5rem;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.newsletter {
+  background: linear-gradient(
+    135deg,
+    rgba(40, 40, 40, 0.9),
+    rgba(10, 10, 10, 0.9)
+  );
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.newsletter:hover {
+  transform: translateY(-5px);
+}
+
+.newsletter h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e50914;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  border-color: #e50914;
+}
+
+.newsletter-form button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #d40813;
+  transform: scale(1.05);
+}
+
+.newsletter-form button:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter {
+    padding: 1rem;
+  }
+
+  .newsletter h3 {
+    font-size: 0.9rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+  }
+}
+
+audio {
+  width: 50%;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #2c2c2c;
+  border-radius: 100px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider {
+  filter: invert(100%);
+}
+
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+.discographie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0rem 5rem;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.album {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.album h2 {
+  font-family: "sora", sans-serif;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.album:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+}
+
+.video-container {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 5rem;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-left: 1rem;
+}
+
+.video-container div {
+  flex: 0 0 auto;
+  text-align: center;
+  scroll-snap-align: start;
+  min-width: 600px;
+}
+
+.video-container iframe {
   width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 10px;
+}
+
+.video-container h2 {
+  font-family: "sora", sans-serif;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: -4rem;
+}
+
+.video-navigation button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.video-navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 900px) {
+  .video-container {
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    gap: 1rem;
+  }
+
+  .video-container iframe {
+    max-width: 100%;
+  }
+
+  .video-container div {
+    min-width: 150px;
+  }
+
+  .video-navigation button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.contact {
+  background: #121212;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #d40813;
+}
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 2rem 0rem;
+  text-align: center;
+  width: 100%;
+  clear: both;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo img {
+  width: 300px;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+.footer-links ul li a:hover {
+  color: #5d5d5d;
+}
+
+.footer-copyright {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.footer-social {
+  margin-top: 0.5rem;
+}
+
+.footer-social a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #5d5d5d;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-social a {
+    margin: 0 0.5rem;
+  }
 }
