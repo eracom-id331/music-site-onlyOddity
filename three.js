@@ -1,14 +1,20 @@
-const videoContainer = document.querySelector(".video-container");
-const videos = document.querySelectorAll(".video-container div");
-let currentIndex = 0;
+<script>
+    const audio = document.getElementById('audio-player');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const playIcon = document.getElementById('play-icon');
 
-function scrollVideos() {
-  currentIndex = (currentIndex + 1) % videos.length; // Incrémente l'index et revient au début
-  videoContainer.scrollTo({
-    left: currentIndex * videoContainer.clientWidth,
-    behavior: "smooth", // Défilement fluide
-  });
-}
+    playPauseBtn.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playIcon.src = 'Image/pause-icon.png'; // Changer l'icône pour "pause"
+        } else {
+            audio.pause();
+            playIcon.src = 'Image/play-icon.png'; // Changer l'icône pour "play"
+        }
+    });
 
-// Définit l'intervalle de défilement (par exemple, 3 secondes)
-setInterval(scrollVideos, 3000);
+    // Optionnel : Changer l'icône automatiquement à la fin de l'audio
+    audio.addEventListener('ended', function () {
+        playIcon.src = 'Image/play-icon.png';
+    });
+</script>
