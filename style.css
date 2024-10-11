@@ -217,10 +217,10 @@ h2 {
 }
 
 audio {
-  width: 1%;
+  width: 50%;
   background-color: #1e1e1e;
   border-radius: 15px;
-  padding: 5px;
+  padding: 7px;
 }
 
 audio::-webkit-media-controls-panel {
@@ -266,6 +266,7 @@ audio::-webkit-media-controls-time-remaining-display {
   margin-top: 0.5rem;
   font-size: 1.5rem;
   transition: transform 0.3s ease, text-shadow 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .album:hover {
@@ -333,7 +334,7 @@ audio::-webkit-media-controls-time-remaining-display {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .video-container {
     padding-bottom: 2rem;
     padding-left: 0.5rem;
@@ -357,7 +358,6 @@ audio::-webkit-media-controls-time-remaining-display {
 .contact {
   background: #121212;
   color: #ffffff;
-  padding: 2rem;
   text-align: center;
 }
 
