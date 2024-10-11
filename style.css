@@ -129,30 +129,35 @@ h2 {
 }
 
 .newsletter {
-  background-color: #000000;
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 40, 40, 0.9),
+    rgba(10, 10, 10, 0.9)
+  );
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
 
-.newsletter-content {
-  max-width: 300px;
-  margin: 0 auto;
+.newsletter:hover {
+  transform: translateY(-5px);
 }
 
 .newsletter h3 {
   font-family: "Sora", sans-serif;
   font-weight: bold;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #e50914; /* Highlighted color */
   margin-bottom: 0.5rem;
 }
 
 .newsletter p {
   font-family: "Sora", sans-serif;
-  font-size: 0.9rem;
-  color: #b3b3b3;
+  font-size: 1rem;
+  color: #e0e0e0; /* Light gray for better readability */
   margin-bottom: 1rem;
 }
 
@@ -160,31 +165,41 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-width: 400px; /* Center align the form */
+  margin: 0 auto; /* Centering */
 }
 
 .newsletter-form input {
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.75rem;
+  font-size: 1rem;
   border-radius: 5px;
-  border: none;
-  width: 100%;
-  box-sizing: border-box;
+  border: 1px solid #444; /* Dark border for contrast */
   outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  border-color: #e50914; /* Highlight border on focus */
 }
 
 .newsletter-form button {
   background-color: #e50914;
   color: #fff;
   border: none;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.75rem;
+  font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .newsletter-form button:hover {
   background-color: #d40813;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.newsletter-form button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
 }
 
 @media only screen and (max-width: 600px) {
@@ -337,6 +352,57 @@ audio::-webkit-media-controls-time-remaining-display {
     font-size: 1.5rem;
     padding: 0.5rem;
   }
+}
+
+.contact {
+  background: #121212; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  padding: 2rem; /* Espacement intérieur */
+  text-align: center; /* Centrer le texte */
+}
+
+.contact h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem; /* Taille de la police pour le titre */
+  margin-bottom: 1.5rem; /* Espace en bas du titre */
+}
+
+.contact-form {
+  display: flex; /* Utiliser flexbox pour le formulaire */
+  flex-direction: column; /* Disposer les éléments en colonne */
+  align-items: center; /* Centrer les éléments */
+  gap: 1rem; /* Espace entre les éléments du formulaire */
+  max-width: 400px; /* Largeur maximale pour le formulaire */
+  margin: 0 auto; /* Centrer le formulaire */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem; /* Espacement intérieur */
+  font-size: 1rem; /* Taille de la police */
+  border: 1px solid #444; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  width: 100%; /* Largeur pleine */
+  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+
+.contact-form textarea {
+  height: 100px; /* Hauteur pour la zone de texte */
+}
+
+.contact-form button {
+  background-color: #e50914; /* Couleur du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  border: none; /* Pas de bordure */
+  padding: 0.5rem 1rem; /* Espacement intérieur */
+  font-size: 1rem; /* Taille de la police */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: background-color 0.3s; /* Transition pour le changement de couleur */
+}
+
+.contact-form button:hover {
+  background-color: #d40813; /* Couleur du bouton au survol */
 }
 
 .footer {
