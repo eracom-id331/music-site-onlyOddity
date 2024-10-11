@@ -150,14 +150,14 @@ h2 {
   font-family: "Sora", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #e50914; /* Highlighted color */
+  color: #e50914;
   margin-bottom: 0.5rem;
 }
 
 .newsletter p {
   font-family: "Sora", sans-serif;
   font-size: 1rem;
-  color: #e0e0e0; /* Light gray for better readability */
+  color: #e0e0e0;
   margin-bottom: 1rem;
 }
 
@@ -165,21 +165,21 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 400px; /* Center align the form */
-  margin: 0 auto; /* Centering */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .newsletter-form input {
   padding: 0.75rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #444; /* Dark border for contrast */
+  border: 1px solid #444;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 .newsletter-form input:focus {
-  border-color: #e50914; /* Highlight border on focus */
+  border-color: #e50914;
 }
 
 .newsletter-form button {
@@ -195,11 +195,11 @@ h2 {
 
 .newsletter-form button:hover {
   background-color: #d40813;
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 .newsletter-form button:active {
-  transform: scale(0.95); /* Slightly shrink on click */
+  transform: scale(0.95);
 }
 
 @media only screen and (max-width: 600px) {
@@ -355,54 +355,54 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 .contact {
-  background: #121212; /* Couleur de fond */
-  color: #ffffff; /* Couleur du texte */
-  padding: 2rem; /* Espacement intérieur */
-  text-align: center; /* Centrer le texte */
+  background: #121212;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
 }
 
 .contact h2 {
   font-family: "Sora", sans-serif;
-  font-size: 2rem; /* Taille de la police pour le titre */
-  margin-bottom: 1.5rem; /* Espace en bas du titre */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-form {
-  display: flex; /* Utiliser flexbox pour le formulaire */
-  flex-direction: column; /* Disposer les éléments en colonne */
-  align-items: center; /* Centrer les éléments */
-  gap: 1rem; /* Espace entre les éléments du formulaire */
-  max-width: 400px; /* Largeur maximale pour le formulaire */
-  margin: 0 auto; /* Centrer le formulaire */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.5rem; /* Espacement intérieur */
-  font-size: 1rem; /* Taille de la police */
-  border: 1px solid #444; /* Bordure */
-  border-radius: 5px; /* Coins arrondis */
-  width: 100%; /* Largeur pleine */
-  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
-  height: 100px; /* Hauteur pour la zone de texte */
+  height: 100px;
 }
 
 .contact-form button {
-  background-color: #e50914; /* Couleur du bouton */
-  color: #fff; /* Couleur du texte du bouton */
-  border: none; /* Pas de bordure */
-  padding: 0.5rem 1rem; /* Espacement intérieur */
-  font-size: 1rem; /* Taille de la police */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur en forme de main */
-  transition: background-color 0.3s; /* Transition pour le changement de couleur */
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-  background-color: #d40813; /* Couleur du bouton au survol */
+  background-color: #d40813;
 }
 
 .footer {
